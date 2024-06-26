@@ -11,5 +11,9 @@
   "devDependencies": {
     "@types/prompt-sync": "^4.2.3",
     "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "prompt-sync-history": "^1.0.1"
   }
 }
