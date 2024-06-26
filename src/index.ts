@@ -12,9 +12,10 @@ function agregarLibro(): void {
     const Titulo = prompt('Ingrese el título del libro: ');
     const Precio = parseFloat(prompt('Ingrese el precio del libro: '));
     const Stock = parseInt(prompt('Ingrese el stock del libro: '), 10);
+    const idioma = prompt('Ingrese el Idioma del Libro: ');
     const AñoPublicacion = new Date(prompt('Ingrese la fecha de publicación del libro (YYYY-MM-DD): '));
 
-    const libro = new book(ISBN, Titulo, Precio, Stock, AñoPublicacion);
+    const libro = new book(ISBN, Titulo, Precio, Stock, idioma, AñoPublicacion);
     seccionRealismoMagico.AgregarLibro(libro);
     console.log('Libro agregado correctamente.');
 }
@@ -31,7 +32,12 @@ function verLibros(): void {
         console.log('No hay libros en la sección.');
     } else {
         libros.forEach(libro => {
-            console.log(`ISBN: ${libro.ISBN}, Título: ${libro.Titulo}, Precio: ${libro.Precio}, Stock: ${libro.Stock}, Año de Publicación: ${libro.AñoPublicacion}`);
+            console.log(`ISBN: ${libro.ISBN},
+                Título: ${libro.Titulo},
+                Precio: ${libro.Precio},
+                Stock: ${libro.Stock},
+                Idioma: ${libro.idioma},
+                Año de Publicación: ${libro.AñoPublicacion}`);
         });
     }
 }
