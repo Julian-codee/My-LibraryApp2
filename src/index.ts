@@ -1,12 +1,16 @@
 // main.ts
-import { book } from './books';
+import { book  } from './books';
 import { Seccion } from './libreria';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
 
+//Constante de la seccion
+
 const seccionRealismoMagico = new Seccion('Realismo Mágico', 'Sección dedicada a libros del género Realismo Mágico');
 
+
+//Funcion agregar libros a la lista 
 function agregarLibro(): void {
     const ISBN = prompt('Ingrese el ISBN del libro: ');
     const Titulo = prompt('Ingrese el título del libro: ');
@@ -20,11 +24,15 @@ function agregarLibro(): void {
     console.log('Libro agregado correctamente.');
 }
 
+//Funcion Eliminar libros a la lista 
+
 function eliminarLibro(): void {
     const ISBN = prompt('Ingrese el ISBN del libro a eliminar: ');
     seccionRealismoMagico.EliminarLibro(ISBN);
     console.log('Libro eliminado correctamente.');
 }
+
+//Funcion ver libros a la lista 
 
 function verLibros(): void {
     const libros = seccionRealismoMagico.ObtenerLibros();
@@ -41,6 +49,8 @@ function verLibros(): void {
         });
     }
 }
+
+//Funcion Menu (Consola-Terminal)
 
 function menu(): void {
     let opcion: string;

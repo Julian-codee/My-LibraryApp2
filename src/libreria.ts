@@ -12,9 +12,13 @@ export class Seccion {
         this.Descripcion = Descripcion;
     }
 
+    //Agregar Libros
+
     AgregarLibro(libro: book): void {
         this.Libros.push(libro);
     }
+
+    //Eliminar libros
 
     EliminarLibro(isbn: string): void {
         for (let i = 0; i < this.Libros.length; i++) {
@@ -24,6 +28,8 @@ export class Seccion {
             }
         }
     }
+
+    //Mostrar Libros
 
     ObtenerLibros(): book[] {
         return this.Libros;
