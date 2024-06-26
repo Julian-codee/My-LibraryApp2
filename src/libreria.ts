@@ -17,7 +17,12 @@ export class Seccion {
     }
 
     EliminarLibro(isbn: string): void {
-        this.Libros = this.Libros.filter(libro => libro.ISBN !== isbn);
+        for (let i = 0; i < this.Libros.length; i++) {
+            if (this.Libros[i].ISBN === isbn) {
+                this.Libros.splice(i, 1);
+                break; // Termina el bucle una vez encontrado y eliminado el libro
+            }
+        }
     }
 
     ObtenerLibros(): book[] {
