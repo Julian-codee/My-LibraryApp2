@@ -7,9 +7,10 @@ export class Seccion {
     Descripcion: string;
     Libros: book[] = [];
 
-    constructor(Nombre: string, Descripcion: string) {
+    constructor(Nombre: string, Descripcion: string, Libros: book[]) {
         this.Nombre = Nombre;
         this.Descripcion = Descripcion;
+        this.Libros = Libros;
     }
 
     //Agregar Libros

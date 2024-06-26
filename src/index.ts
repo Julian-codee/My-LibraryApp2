@@ -1,13 +1,14 @@
 // main.ts
-import { book  } from './books';
+import { book } from './books';
 import { Seccion } from './libreria';
+import { libros } from './book';
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
 
 //Constante de la seccion
 
-const seccionRealismoMagico = new Seccion('Realismo Mágico', 'Sección dedicada a libros del género Realismo Mágico');
+const seccionRealismoMagico = new Seccion('Realismo Mágico', 'Sección dedicada a libros del género Realismo Mágico', libros);
 
 
 //Funcion agregar libros a la lista 
