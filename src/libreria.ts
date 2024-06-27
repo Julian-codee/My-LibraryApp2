@@ -1,4 +1,5 @@
 //Importacion Book
+import { libros } from "./book";
 import { book } from "./books";
 
 //Export y creacion de la clase seccion
