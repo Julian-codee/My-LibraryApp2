@@ -1,7 +1,9 @@
-// main.ts
 import { book } from './books';
 import { Seccion } from './libreria';
 import { libros } from './book';
+/**
+ * !Instalacion de librerias Prompt-Sync
+ */
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
